@@ -3,10 +3,10 @@
 
 Summary:	An open nonlinear structural analysis solver for GNU-Octave
 Name:		octave-%{octpkg}
-Version:	0.2.5
+Version:	0.2.7
 Release:	1
-Url:		https://github.com/ONSAS/%{oname}.m/
-Source0:	%{url}/archive/v%{version}/%{oname}.m-%{version}.tar.gz
+Url:		https://github.com/ONSAS/ONSAS.m/
+Source0:	https://github.com/ONSAS/ONSAS.m/archive/v%{version}/ONSAS.m-%{version}.tar.gz
 License:	GPLv3+
 Group:		Sciences/Mathematics
 BuildArch:	noarch
