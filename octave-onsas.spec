@@ -1,22 +1,23 @@
-%define oname ONSAS
-%define octpkg %(echo %oname | tr [:upper:] [:lower:])
+%global octpkg onsas
 
 Summary:	An open nonlinear structural analysis solver for GNU-Octave
-Name:		octave-%{octpkg}
+Name:		octave-onsas
 Version:	0.2.7
-Release:	1
-Url:		https://github.com/ONSAS/ONSAS.m/
-Source0:	https://github.com/ONSAS/ONSAS.m/archive/v%{version}/ONSAS.m-%{version}.tar.gz
+Release:	2
 License:	GPLv3+
 Group:		Sciences/Mathematics
-BuildArch:	noarch
+#Url:		https://packages.octave.org/onsas/
+Url:		https://github.com/ONSAS/ONSAS.m/
+Source0:	https://github.com/ONSAS/ONSAS.m/archive/v%{version}/ONSAS.m-%{version}.tar.gz
 
-BuildRequires:	octave-devel >= 4.0.0
+BuildRequires:  octave-devel >= 4.0.0
 
 Requires:	octave(api) = %{octave_api}
 
 Requires(post): octave
 Requires(postun): octave
+
+BuildArch:	noarch
 
 %description
 ONSAS is a GNU-Octave code for static/dynamic and linear/non-linear analysis
@@ -33,6 +34,7 @@ beam/truss/solid 3D structures. A reduced list of features is listed at next:
   *  Dynamic analysis methods Newmark Method and α-HHT method.
   *  Loads nodal loads, time-history user-defined loading program.
 
+
 %files
 %license COPYING
 #doc NEWS
@@ -42,13 +44,10 @@ beam/truss/solid 3D structures. A reduced list of features is listed at next:
 #---------------------------------------------------------------------------
 
 %prep
-%autosetup -p1 -n %{oname}.m-%{version}
+%autosetup -p1 -n ONSAS.m-%{version}
 
-# fix version inside DESCRIPTION
+# fix version in DESCRIPTION
 sed -i -e "s|Version: 0.2.4|Version: %{version}|" DESCRIPTION
-
-# remove backup files
-#find . -name \*~ -delete
 
 %build
 %octave_pkg_build
