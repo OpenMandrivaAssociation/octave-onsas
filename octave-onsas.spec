@@ -2,8 +2,8 @@
 
 Summary:	An open nonlinear structural analysis solver for GNU-Octave
 Name:		octave-onsas
-Version:	0.2.7
-Release:	2
+Version:	0.2.8
+Release:	1
 License:	GPLv3+
 Group:		Sciences/Mathematics
 #Url:		https://packages.octave.org/onsas/
