@@ -2,7 +2,7 @@
 
 Summary:	An open nonlinear structural analysis solver for GNU-Octave
 Name:		octave-onsas
-Version:	0.2.8
+Version:	0.2.9
 Release:	1
 License:	GPLv3+
 Group:		Sciences/Mathematics
@@ -44,7 +44,7 @@ beam/truss/solid 3D structures. A reduced list of features is listed at next:
 #---------------------------------------------------------------------------
 
 %prep
-%autosetup -p1 -n ONSAS.m-%{version}
+%autosetup -p1 -n ONSAS-%{version}
 
 # fix version in DESCRIPTION
 sed -i -e "s|Version: 0.2.7|Version: %{version}|" DESCRIPTION
