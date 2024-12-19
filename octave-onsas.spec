@@ -49,6 +49,9 @@ beam/truss/solid 3D structures. A reduced list of features is listed at next:
 # fix version in DESCRIPTION
 sed -i -e "s|Version: 0.3.0|Version: %{version}|" DESCRIPTION
 
+# NOTE: src/FILE is mossing so no *.m file is coopied to inst/ folder
+mv src inst
+
 %build
 %octave_pkg_build
 
