@@ -47,7 +47,7 @@ beam/truss/solid 3D structures. A reduced list of features is listed at next:
 %autosetup -p1 -n ONSAS-%{version}
 
 # fix version in DESCRIPTION
-sed -i -e 's,^Version: 0.3.2
+sed -i -e 's,^Version: \(.*\)$,Version: %{version},' DESCRIPTION
 
 # NOTE: src/FILE is mossing so no *.m file is coopied to inst/ folder
 mv src inst
